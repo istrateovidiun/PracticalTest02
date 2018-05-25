@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ro.pub.cs.systems.eim.practic.myapplication.MainActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <Button
+        android:id="@+id/server_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="86dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginTop="32dp"
+        android:text="START"
+        app:layout_constraintBottom_toTopOf="@+id/client_address"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/server_port"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/server_port"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="14dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="5000"
+        app:layout_constraintEnd_toStartOf="@+id/server_button"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/server_button" />
+
+
+    <EditText
+        android:id="@+id/client_port"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:layout_marginEnd="31dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="5000"
+        app:layout_constraintBaseline_toBaselineOf="@+id/client_address"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/client_address" />
+
+    <Button
+        android:id="@+id/client_get"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="62dp"
+        android:text="GO"
+        app:layout_constraintBaseline_toBaselineOf="@+id/client_url"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/client_url" />
+
+
+    <EditText
+        android:id="@+id/client_address"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="29dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginStart="28dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="localhost"
+        app:layout_constraintBottom_toTopOf="@+id/client_url"
+        app:layout_constraintEnd_toStartOf="@+id/client_port"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/server_button" />
+
+    <TextView
+        android:id="@+id/client_resultview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="41dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/client_url" />
+
+    <EditText
+        android:id="@+id/client_url"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="74dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginStart="28dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="http://"
+        app:layout_constraintBottom_toTopOf="@+id/client_resultview"
+        app:layout_constraintEnd_toStartOf="@+id/client_get"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/client_address" />
+
+</android.support.constraint.ConstraintLayout>
